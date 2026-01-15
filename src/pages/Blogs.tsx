@@ -122,13 +122,13 @@ const Blogs: React.FC = () => {
             {featuredPosts.map((post) => (
               <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
                 <div className="md:flex">
-                  <div className="md:w-1/2">
+                  <Link to={`/blogs/${post.id}`} className="md:w-1/2 block">
                     <img
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                     />
-                  </div>
+                  </Link>
                   <CardContent className="md:w-1/2 p-8 flex flex-col justify-center">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="bg-rebuttl-blue text-white px-3 py-1 rounded-full text-sm font-medium">
@@ -136,9 +136,11 @@ const Blogs: React.FC = () => {
                       </span>
                       <span className="text-sm text-gray-500">{post.category}</span>
                     </div>
-                    <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-rebuttl-blue transition-colors">
-                      {post.title}
-                    </h2>
+                    <Link to={`/blogs/${post.id}`}>
+                      <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-rebuttl-blue transition-colors cursor-pointer">
+                        {post.title}
+                      </h2>
+                    </Link>
                     <p className="text-gray-600 mb-6 text-lg">{post.excerpt}</p>
                     <div className="flex items-center gap-6 text-sm text-gray-500 mb-6">
                       <div className="flex items-center gap-2">
@@ -171,22 +173,24 @@ const Blogs: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.filter(post => !post.featured).map((post) => (
               <Card key={post.id} className="group hover:shadow-lg transition-all duration-300 overflow-hidden">
-                <div className="relative">
+                <Link to={`/blogs/${post.id}`} className="block relative">
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                       {post.category}
                     </span>
                   </div>
-                </div>
+                </Link>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-rebuttl-blue transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
+                  <Link to={`/blogs/${post.id}`}>
+                    <h3 className="text-xl font-bold mb-3 group-hover:text-rebuttl-blue transition-colors line-clamp-2 cursor-pointer">
+                      {post.title}
+                    </h3>
+                  </Link>
                   <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
                     <div className="flex items-center gap-1">

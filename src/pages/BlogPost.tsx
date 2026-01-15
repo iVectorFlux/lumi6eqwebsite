@@ -490,10 +490,10 @@ const BlogPost: React.FC = () => {
         </div>
 
         {/* Article Content */}
-        <article className="container mx-auto px-4 -mt-16 relative z-10">
-          <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        <article className="container mx-auto px-4 md:px-8 lg:px-16 -mt-16 relative z-10">
+          <div className="bg-white rounded-2xl shadow-xl p-6 md:p-10 lg:p-16">
             {/* Category & Back Link */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-8">
               <Link 
                 to="/blogs" 
                 className="inline-flex items-center gap-2 text-gray-600 hover:text-rebuttl-blue transition-colors"
@@ -507,12 +507,12 @@ const BlogPost: React.FC = () => {
             </div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-gray-900 leading-tight">
               {blog.title}
             </h1>
 
             {/* Meta Info */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-8 pb-8 border-b border-gray-200">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500 mb-10 pb-10 border-b border-gray-200">
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
                 <span>{blog.author}</span>
@@ -534,17 +534,17 @@ const BlogPost: React.FC = () => {
             </div>
 
             {/* Excerpt */}
-            <p className="text-xl text-gray-600 mb-8 italic">
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 italic leading-relaxed">
               {blog.excerpt}
             </p>
 
-            {/* Content */}
-            <div className="prose prose-lg max-w-none">
+            {/* Content - Two Column Layout on Large Screens */}
+            <div className="lg:columns-2 lg:gap-12 prose prose-lg lg:prose-xl max-w-none">
               {renderContent(blog.content)}
             </div>
 
             {/* Share & CTA */}
-            <div className="mt-12 pt-8 border-t border-gray-200">
+            <div className="mt-16 pt-10 border-t border-gray-200">
               <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                 <button className="inline-flex items-center gap-2 text-gray-600 hover:text-rebuttl-blue transition-colors">
                   <Share2 className="w-5 h-5" />
@@ -552,7 +552,7 @@ const BlogPost: React.FC = () => {
                 </button>
                 <Link 
                   to="/blogs"
-                  className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white px-6 py-3 rounded-lg font-bold transition-colors"
+                  className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white px-8 py-4 rounded-lg font-bold transition-colors text-lg"
                 >
                   Read More Articles
                 </Link>
