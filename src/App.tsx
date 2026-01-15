@@ -9,6 +9,7 @@ import React, { useEffect, Suspense, lazy } from "react";
 const Index = lazy(() => import("./pages/Index"));
 const Products = lazy(() => import("./pages/Products"));
 const Blogs = lazy(() => import("./pages/Blogs"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Education = lazy(() => import("./pages/Education"));
 const Individuals = lazy(() => import("./pages/Individuals"));
 const NotFound = lazy(() => import("./pages/NotFound"));
@@ -74,6 +75,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/products" element={<Products />} />
               <Route path="/blogs" element={<Blogs />} />
+              <Route path="/blogs/:slug" element={<BlogPost />} />
               <Route path="/education" element={<Education />} />
               <Route path="/individuals" element={<Individuals />} />
               <Route path="*" element={<NotFound />} />

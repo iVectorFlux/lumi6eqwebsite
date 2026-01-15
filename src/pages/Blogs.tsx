@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar, Clock, User, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -153,13 +154,13 @@ const Blogs: React.FC = () => {
                         {post.readTime}
                       </div>
                     </div>
-                    <button 
+                    <Link 
+                      to={`/blogs/${post.id}`}
                       className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
-                      onClick={() => alert('Blog post coming soon!')}
                     >
                       Read More
                       <ArrowRight className="w-4 h-4" />
-                    </button>
+                    </Link>
                   </CardContent>
                 </div>
               </Card>
@@ -197,13 +198,13 @@ const Blogs: React.FC = () => {
                       {post.readTime}
                     </div>
                   </div>
-                  <button 
+                  <Link 
+                    to={`/blogs/${post.id}`}
                     className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
-                    onClick={() => alert('Blog post coming soon!')}
                   >
                     Read More
                     <ArrowRight className="w-4 h-4" />
-                  </button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
