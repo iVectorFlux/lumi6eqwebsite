@@ -1,10 +1,7 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 
 const HowItWorks: React.FC = () => {
-  const [activeStep, setActiveStep] = useState(0);
-  const [visibleSteps, setVisibleSteps] = useState<Set<number>>(new Set());
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const steps = [
     {
@@ -15,7 +12,7 @@ const HowItWorks: React.FC = () => {
     {
       number: '02',
       title: 'Personalize Learning',
-      description: "Deliver targeted micro-learnings and practices tailored to each person's growth areas."
+      description: 'Deliver targeted micro-learnings and practices tailored to each person’s growth areas.'
     },
     {
       number: '03',
@@ -29,29 +26,6 @@ const HowItWorks: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const observers = stepRefs.current.map((ref, index) => {
-      if (!ref) return null;
-      
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setVisibleSteps(prev => new Set(prev).add(index));
-            setActiveStep(index);
-          }
-        },
-        { threshold: 0.5 }
-      );
-      
-      observer.observe(ref);
-      return observer;
-    });
-
-    return () => {
-      observers.forEach(obs => obs?.disconnect());
-    };
-  }, []);
-
   return (
     <section id="how-it-works" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
@@ -64,78 +38,24 @@ const HowItWorks: React.FC = () => {
           </p>
         </div>
         
-        {/* Interactive Timeline */}
-        <div className="relative mb-8">
-          {/* Timeline line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
+          {steps.map((step, index) => (
             <div 
-              className="h-full bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple transition-all duration-1000 ease-out"
-              style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
-            />
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
-            {steps.map((step, index) => {
-              const isVisible = visibleSteps.has(index);
-              const isActive = activeStep === index;
+              key={step.number}
+              className="relative p-4 md:p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
+            >
+              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+              <p className="text-gray-600">{step.description}</p>
               
-              return (
-                <div 
-                  key={step.number}
-                  ref={(el) => (stepRefs.current[index] = el)}
-                  onClick={() => setActiveStep(index)}
-                  className={`relative p-4 md:p-6 bg-white rounded-2xl border-2 cursor-pointer transition-all duration-500 group ${
-                    isActive 
-                      ? 'border-rebuttl-blue shadow-lg scale-105' 
-                      : 'border-gray-100 shadow-sm hover:shadow-md hover:border-rebuttl-blue/50'
-                  } ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                  }`}
-                  style={{ 
-                    transitionDelay: `${index * 150}ms`,
-                    animationFillMode: 'forwards'
-                  }}
-                >
-                  {/* Step number badge */}
-                  <div className={`absolute -top-4 left-6 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-rebuttl-blue text-white scale-110' 
-                      : 'bg-gray-100 text-gray-600'
-                  }`}>
-                    {step.number}
-                  </div>
-                  
-                  <h3 className="text-xl font-semibold mb-3 mt-4">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                  
-                  {/* Connection line between steps - animated */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 z-10">
-                      <div 
-                        className={`h-full bg-gradient-to-r transition-all duration-1000 ${
-                          isActive || visibleSteps.has(index + 1)
-                            ? 'from-rebuttl-blue to-rebuttl-purple opacity-100'
-                            : 'from-gray-200 to-gray-200 opacity-30'
-                        }`}
-                        style={{
-                          width: isActive ? '100%' : '0%',
-                          transitionDelay: `${index * 200}ms`
-                        }}
-                      />
-                    </div>
-                  )}
-                  
-                  {/* Active indicator */}
-                  {isActive && (
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-rebuttl-blue/5 to-rebuttl-purple/5 -z-10 animate-pulse-soft" />
-                  )}
-                </div>
-              );
-            })}
-          </div>
+              {/* Connection line between steps */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-rebuttl-blue/60 to-rebuttl-purple/60 z-10"></div>
+              )}
+            </div>
+          ))}
           
           {/* Background decorative grid */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDYwaDYwVjBoLTYweiIvPjxwYXRoIGQ9Ik0zNiAzNmgyNHYtMTJIMzZ2MTJ6TTAgMzZoMjR2LTEySDB2MTJ6IiBmaWxsPSIjZWFlYWVhIiBmaWxsLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-10 -z-20"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0wIDYwaDYwVjBoLTYweiIvPjxwYXRoIGQ9Ik0zNiAzNmgyNHYtMTJIMzZ2MTJ6TTAgMzZoMjR2LTEySDB2MTJ6IiBmaWxsPSIjZWFlYWVhIiBmaWxsLW9wYWNpdHk9Ii4wNSIvPjwvZz48L3N2Zz4=')] opacity-10 -z-10"></div>
         </div>
         
         <div className="mt-16 p-8 rounded-2xl relative overflow-hidden">

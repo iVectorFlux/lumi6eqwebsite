@@ -12,12 +12,6 @@ const Products: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setVisibleSections(prev => new Set(prev).add(entry.target.id));
-          } else {
-            setVisibleSections(prev => {
-              const next = new Set(prev);
-              next.delete(entry.target.id);
-              return next;
-            });
           }
         });
       },
@@ -37,7 +31,7 @@ const Products: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = sectionRefs.current[sectionId];
     if (element) {
-      element.scrollIntoView({
+      element.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start',
         inline: 'nearest'
@@ -110,6 +104,8 @@ const Products: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Navbar />
+      
       {/* Floating Navigation Indicator */}
       <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
         <div className="flex flex-col gap-3">
@@ -117,10 +113,11 @@ const Products: React.FC = () => {
             <button
               key={section}
               onClick={() => scrollToSection(section)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${visibleSections.has(section)
-                ? 'bg-purple-500 scale-125'
-                : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                visibleSections.has(section)
+                  ? 'bg-purple-500 scale-125'
+                  : 'bg-gray-300 hover:bg-gray-400'
+              }`}
               title={`Scroll to ${section.charAt(0).toUpperCase() + section.slice(1)}`}
             />
           ))}
@@ -135,31 +132,31 @@ const Products: React.FC = () => {
               Our Products
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Complete emotional intelligence platform designed for modern teams.
+              Complete emotional intelligence platform designed for modern teams. 
               Measure, learn, and grow together.
             </p>
-
+            
             {/* Navigation Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <button
+              <button 
                 onClick={() => scrollToSection('discover')}
                 className="px-6 py-3 bg-purple-100 text-purple-700 rounded-lg font-medium hover:bg-purple-200 hover:shadow-md transition-all duration-300 border border-purple-200"
               >
                 Discover
               </button>
-              <button
+              <button 
                 onClick={() => scrollToSection('insights')}
                 className="px-6 py-3 bg-blue-100 text-blue-700 rounded-lg font-medium hover:bg-blue-200 hover:shadow-md transition-all duration-300 border border-blue-200"
               >
                 Insights
               </button>
-              <button
+              <button 
                 onClick={() => scrollToSection('grow')}
                 className="px-6 py-3 bg-orange-100 text-orange-700 rounded-lg font-medium hover:bg-orange-200 hover:shadow-md transition-all duration-300 border border-orange-200"
               >
                 Grow
               </button>
-              <button
+              <button 
                 onClick={() => scrollToSection('flow')}
                 className="px-6 py-3 bg-green-100 text-green-700 rounded-lg font-medium hover:bg-green-200 hover:shadow-md transition-all duration-300 border border-green-200"
               >
@@ -179,7 +176,7 @@ const Products: React.FC = () => {
               <div className="bg-rebuttl-purple/10 text-rebuttl-purple px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🔍</span>Contextual Precision
               </div>
-
+              
               {/* Insights Tags */}
               <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🌟</span>Strengths Uncovered
@@ -190,7 +187,7 @@ const Products: React.FC = () => {
               <div className="bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">💡</span>Actionable Intelligence
               </div>
-
+              
               {/* Grow Tags */}
               <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🤝</span>EI in Action
@@ -201,7 +198,7 @@ const Products: React.FC = () => {
               <div className="bg-rebuttl-orange/10 text-rebuttl-orange px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">🔄</span>Continuous Growth
               </div>
-
+              
               {/* Flow Tags */}
               <div className="bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium opacity-0 transform -translate-y-8 animate-drop-bounce" style={{ animationDelay: '1.0s', animationFillMode: 'forwards' }}>
                 <span className="mr-2">👥</span>Teamwork Amplified
@@ -218,7 +215,7 @@ const Products: React.FC = () => {
           {/* Products Detailed Sections */}
           <div className="space-y-32">
             {/* Lumi6 Discover - Card Left, Info Right */}
-            <div
+            <div 
               id="discover"
               ref={(el) => (sectionRefs.current['discover'] = el)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-hidden"
@@ -231,8 +228,8 @@ const Products: React.FC = () => {
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
                       <div className="bg-gradient-to-br from-purple-100 to-purple-200 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 shadow-lg">
-                        <img
-                          src={products[0].icon}
+                        <img 
+                          src={products[0].icon} 
                           alt={`${products[0].name} icon`}
                           className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
                           loading="lazy"
@@ -245,7 +242,7 @@ const Products: React.FC = () => {
                           Focus: {products[0].focus}
                         </div>
                         <p className="text-gray-600 mb-6">{products[0].description}</p>
-
+                        
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
                           <ul className="space-y-1">
@@ -272,7 +269,7 @@ const Products: React.FC = () => {
                   </CardContent>
                 </Card>
               </div>
-
+              
               <div className="order-2 lg:order-2 flex flex-col justify-center h-full opacity-0 transform translate-x-12 animate-drop-bounce" style={{ animationDelay: '0.3s', animationFillMode: 'forwards' }}>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Reveal how people really respond at work.</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
@@ -290,7 +287,7 @@ const Products: React.FC = () => {
             </div>
 
             {/* Lumi6 Insights - Card Right, Info Left */}
-            <div
+            <div 
               id="insights"
               ref={(el) => (sectionRefs.current['insights'] = el)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-hidden"
@@ -298,7 +295,7 @@ const Products: React.FC = () => {
               {/* Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-transparent rounded-3xl -z-10"></div>
               <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
-
+              
               <div className="order-2 lg:order-1 flex flex-col justify-center h-full opacity-0 transform -translate-x-12 animate-drop-bounce" style={{ animationDelay: '0.5s', animationFillMode: 'forwards' }}>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Turn data into direction.</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
@@ -313,14 +310,14 @@ const Products: React.FC = () => {
                   </p>
                 </div>
               </div>
-
+              
               <div className="order-1 lg:order-2 opacity-0 transform translate-x-12 animate-drop-bounce" style={{ animationDelay: '0.7s', animationFillMode: 'forwards' }}>
                 <Card className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border-gray-200 relative overflow-hidden bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
                       <div className="bg-gradient-to-br from-blue-100 to-cyan-200 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 shadow-lg">
-                        <img
-                          src={products[1].icon}
+                        <img 
+                          src={products[1].icon} 
                           alt={`${products[1].name} icon`}
                           className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
                           loading="lazy"
@@ -333,7 +330,7 @@ const Products: React.FC = () => {
                           Focus: {products[1].focus}
                         </div>
                         <p className="text-gray-600 mb-6">{products[1].description}</p>
-
+                        
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
                           <ul className="space-y-1">
@@ -363,7 +360,7 @@ const Products: React.FC = () => {
             </div>
 
             {/* Lumi6 Grow - Card Left, Info Right */}
-            <div
+            <div 
               id="grow"
               ref={(el) => (sectionRefs.current['grow'] = el)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-hidden"
@@ -371,14 +368,14 @@ const Products: React.FC = () => {
               {/* Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-amber-50 to-transparent rounded-3xl -z-10"></div>
               <div className="absolute -top-20 -right-20 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl -z-10"></div>
-
+              
               <div className="order-1 lg:order-1 opacity-0 transform -translate-x-12 animate-drop-bounce" style={{ animationDelay: '0.9s', animationFillMode: 'forwards' }}>
                 <Card className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border-gray-200 relative overflow-hidden bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
                       <div className="bg-gradient-to-br from-orange-100 to-amber-200 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 shadow-lg">
-                        <img
-                          src={products[2].icon}
+                        <img 
+                          src={products[2].icon} 
                           alt={`${products[2].name} icon`}
                           className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
                           loading="lazy"
@@ -391,7 +388,7 @@ const Products: React.FC = () => {
                           Focus: {products[2].focus}
                         </div>
                         <p className="text-gray-600 mb-6">{products[2].description}</p>
-
+                        
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
                           <ul className="space-y-1">
@@ -418,7 +415,7 @@ const Products: React.FC = () => {
                   </CardContent>
                 </Card>
               </div>
-
+              
               <div className="order-2 lg:order-2 flex flex-col justify-center h-full opacity-0 transform translate-x-12 animate-drop-bounce" style={{ animationDelay: '1.1s', animationFillMode: 'forwards' }}>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent">Build EQ like a muscle — one habit at a time.</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
@@ -436,7 +433,7 @@ const Products: React.FC = () => {
             </div>
 
             {/* Lumi6 Flow - Card Right, Info Left */}
-            <div
+            <div 
               id="flow"
               ref={(el) => (sectionRefs.current['flow'] = el)}
               className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative overflow-hidden"
@@ -444,7 +441,7 @@ const Products: React.FC = () => {
               {/* Gradient Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-emerald-50 to-transparent rounded-3xl -z-10"></div>
               <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-green-200/20 rounded-full blur-3xl -z-10"></div>
-
+              
               <div className="order-2 lg:order-1 flex flex-col justify-center h-full opacity-0 transform -translate-x-12 animate-drop-bounce" style={{ animationDelay: '1.3s', animationFillMode: 'forwards' }}>
                 <h3 className="text-2xl font-bold text-gray-800 mb-6 bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">EQ that shows up when it's needed most.</h3>
                 <p className="text-sm text-gray-600 mb-4 leading-relaxed">
@@ -462,14 +459,14 @@ const Products: React.FC = () => {
                   </p>
                 </div>
               </div>
-
+              
               <div className="order-1 lg:order-2 opacity-0 transform translate-x-12 animate-drop-bounce" style={{ animationDelay: '1.5s', animationFillMode: 'forwards' }}>
                 <Card className="group hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 border-gray-200 relative overflow-hidden bg-white/80 backdrop-blur-sm">
                   <CardContent className="p-8 relative z-10">
                     <div className="flex items-start gap-6">
                       <div className="bg-gradient-to-br from-green-100 to-emerald-200 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 flex-shrink-0 shadow-lg">
-                        <img
-                          src={products[3].icon}
+                        <img 
+                          src={products[3].icon} 
                           alt={`${products[3].name} icon`}
                           className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
                           loading="lazy"
@@ -482,7 +479,7 @@ const Products: React.FC = () => {
                           Focus: {products[3].focus}
                         </div>
                         <p className="text-gray-600 mb-6">{products[3].description}</p>
-
+                        
                         <div className="space-y-2">
                           <h4 className="font-medium text-gray-900">Key Features:</h4>
                           <ul className="space-y-1">
@@ -512,97 +509,6 @@ const Products: React.FC = () => {
             </div>
           </div>
 
-          {/* Product Roadmap Section */}
-          <div id="roadmap" className="mt-32 relative">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-4">
-                Product Roadmap
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See what's coming next in our journey to build the world's best EQ platform
-              </p>
-            </div>
-
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange"></div>
-
-              <div className="space-y-12">
-                {[
-                  {
-                    quarter: 'Q1 2025',
-                    status: 'completed',
-                    title: 'Enhanced Analytics Dashboard',
-                    description: 'Advanced reporting with real-time insights and customizable metrics.',
-                    features: ['Custom report builder', 'Team comparison tools', 'Progress tracking']
-                  },
-                  {
-                    quarter: 'Q2 2025',
-                    status: 'in-progress',
-                    title: 'AI-Powered Coaching Assistant',
-                    description: 'Intelligent coaching recommendations based on individual EQ profiles.',
-                    features: ['Personalized coaching plans', 'AI insights', 'Automated check-ins']
-                  },
-                  {
-                    quarter: 'Q3 2025',
-                    status: 'planned',
-                    title: 'Mobile App Launch',
-                    description: 'Full-featured mobile app for iOS and Android with offline capabilities.',
-                    features: ['Native mobile experience', 'Offline mode', 'Push notifications']
-                  },
-                  {
-                    quarter: 'Q4 2025',
-                    status: 'planned',
-                    title: 'Enterprise Integrations',
-                    description: 'Seamless integration with popular HR and collaboration tools.',
-                    features: ['Slack integration', 'Microsoft Teams', 'Workday connector']
-                  }
-                ].map((item, index) => (
-                  <div key={index} className="relative md:pl-24">
-                    {/* Timeline dot */}
-                    <div className={`hidden md:block absolute left-6 w-4 h-4 rounded-full border-4 border-white transition-all duration-500 ${item.status === 'completed' ? 'bg-rebuttl-blue' :
-                      item.status === 'in-progress' ? 'bg-rebuttl-orange animate-pulse' :
-                        'bg-gray-300'
-                      }`}></div>
-
-                    <div className={`bg-white rounded-2xl border-2 p-6 shadow-sm hover:shadow-md transition-all duration-300 ${item.status === 'completed' ? 'border-rebuttl-blue/30' :
-                      item.status === 'in-progress' ? 'border-rebuttl-orange/30' :
-                        'border-gray-200'
-                      }`}>
-                      <div className="flex items-start justify-between mb-4">
-                        <div>
-                          <div className="flex items-center gap-3 mb-2">
-                            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${item.status === 'completed' ? 'bg-green-100 text-green-800' :
-                              item.status === 'in-progress' ? 'bg-orange-100 text-orange-800' :
-                                'bg-gray-100 text-gray-600'
-                              }`}>
-                              {item.status === 'completed' ? '✓ Completed' :
-                                item.status === 'in-progress' ? '🚀 In Progress' :
-                                  '📅 Planned'}
-                            </span>
-                            <span className="text-sm font-medium text-gray-500">{item.quarter}</span>
-                          </div>
-                          <h3 className="text-2xl font-bold text-gray-900">{item.title}</h3>
-                        </div>
-                      </div>
-                      <p className="text-gray-600 mb-4">{item.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {item.features.map((feature, fIndex) => (
-                          <span
-                            key={fIndex}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
           {/* CTA Section */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple rounded-2xl p-8 text-white">
@@ -612,7 +518,7 @@ const Products: React.FC = () => {
               <p className="text-lg mb-6 opacity-90">
                 Start with a free assessment and see the difference emotional intelligence can make.
               </p>
-              <button
+              <button 
                 className="bg-white text-rebuttl-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
               >
@@ -629,10 +535,10 @@ const Products: React.FC = () => {
         className="fixed bottom-8 right-8 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 z-50 group"
         title="Back to top"
       >
-        <svg
-          className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300"
-          fill="none"
-          stroke="currentColor"
+        <svg 
+          className="w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300" 
+          fill="none" 
+          stroke="currentColor" 
           viewBox="0 0 24 24"
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />

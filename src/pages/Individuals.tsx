@@ -7,6 +7,7 @@ import { User, TrendingUp, Heart, Target, Users, Award, Briefcase, Lightbulb } f
 const Individuals: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-rebuttl-lightBg">
+      <Navbar />
       <main className="flex-grow pt-24">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-rebuttl-purple/10 to-white">

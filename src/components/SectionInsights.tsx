@@ -1,42 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const personas = [
   {
     key: 'hiring',
     title: 'For Hiring & Talent Teams',
     desc: 'Hire beyond the resume.',
-    icon: '👥',
-    color: 'green'
   },
   {
     key: 'ld',
     title: 'For Learning & Development teams',
     desc: 'Build the skills that matter most.',
-    icon: '📚',
-    color: 'orange'
   },
   {
     key: 'individuals',
     title: 'For Individuals',
     desc: 'Unlock your emotional superpower.',
-    icon: '🌟',
-    color: 'blue'
   },
 ];
 
 const SectionInsights: React.FC = () => {
   const [active, setActive] = useState('hiring');
-  const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const handlePersonaChange = (key: string) => {
-    if (key === active) return;
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setActive(key);
-      setTimeout(() => setIsTransitioning(false), 50);
-    }, 300);
-  };
-
   return (
     <section id="insights" className="py-16 md:py-24 bg-rebuttl-lightBg">
       <div className="container mx-auto px-4">
@@ -47,38 +30,27 @@ const SectionInsights: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-10">
-          {personas.map((p, index) => (
+          {personas.map(p => (
             <button
               key={p.key}
-              onClick={() => handlePersonaChange(p.key)}
-              className={`text-left p-5 rounded-2xl border transition-all duration-500 transform ${
+              onClick={() => setActive(p.key)}
+              className={`text-left p-5 rounded-2xl border transition-all ${
                 active === p.key 
-                  ? p.color === 'green'
-                    ? 'border-green-300 bg-gradient-to-br from-green-50 to-emerald-100 shadow-lg scale-105' 
-                    : p.color === 'orange'
-                    ? 'border-orange-300 bg-gradient-to-br from-orange-50 to-coral-100 shadow-lg scale-105'
-                    : 'border-blue-300 bg-gradient-to-br from-blue-50 to-sky-100 shadow-lg scale-105'
-                  : 'border-gray-200 bg-white/60 hover:bg-white hover:scale-[1.02]'
+                  ? p.key === 'hiring' 
+                    ? 'border-green-300 bg-gradient-to-br from-green-50 to-emerald-100 shadow-sm' 
+                    : p.key === 'ld'
+                    ? 'border-orange-300 bg-gradient-to-br from-orange-50 to-coral-100 shadow-sm'
+                    : 'border-blue-300 bg-gradient-to-br from-blue-50 to-sky-100 shadow-sm'
+                  : 'border-gray-200 bg-white/60 hover:bg-white'
               }`}
-              style={{
-                animationDelay: `${index * 100}ms`
-              }}
             >
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-2xl">{p.icon}</span>
-                <div className="font-semibold">{p.title}</div>
-              </div>
+              <div className="font-semibold">{p.title}</div>
               <div className="text-gray-600 text-sm mt-1">{p.desc}</div>
-              {active === p.key && (
-                <div className="mt-3 h-1 bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple rounded-full animate-pulse-soft" />
-              )}
             </button>
           ))}
         </div>
 
-        <div className={`rounded-2xl border border-gray-200 bg-white p-6 transition-all duration-500 ${
-          isTransitioning ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
-        }`}>
+        <div className="rounded-2xl border border-gray-200 bg-white p-6">
           {active === 'hiring' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
               <div>

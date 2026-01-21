@@ -1,61 +1,6 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-
-interface AnimatedCounterProps {
-  end: number;
-  suffix?: string;
-  duration?: number;
-  decimals?: number;
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ end, suffix = '', duration = 2000, decimals = 0 }) => {
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          const startTime = Date.now();
-          const startValue = 0;
-          
-          const animate = () => {
-            const now = Date.now();
-            const progress = Math.min((now - startTime) / duration, 1);
-            const easeOutQuart = 1 - Math.pow(1 - progress, 4);
-            const currentValue = startValue + (end - startValue) * easeOutQuart;
-            
-            setCount(currentValue);
-            
-            if (progress < 1) {
-              requestAnimationFrame(animate);
-            } else {
-              setCount(end);
-            }
-          };
-          
-          requestAnimationFrame(animate);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [end, duration, hasAnimated]);
-
-  return (
-    <span ref={ref}>
-      {count.toFixed(decimals)}{suffix}
-    </span>
-  );
-};
 
 const CTA: React.FC = () => {
   return (
@@ -96,30 +41,22 @@ const CTA: React.FC = () => {
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center relative group">
             <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">
-              <AnimatedCounter end={50} suffix="K+" />
-            </p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">50K+</p>
             <p className="text-gray-300">Leaders Enabled</p>
           </div>
           <div className="text-center relative group">
             <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">
-              <AnimatedCounter end={10} suffix="K+" />
-            </p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">10K+</p>
             <p className="text-gray-300">Lessons Completed</p>
           </div>
           <div className="text-center relative group">
             <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">
-              <AnimatedCounter end={85} suffix="%" />
-            </p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">85%</p>
             <p className="text-gray-300">Teams Report Growth</p>
           </div>
           <div className="text-center relative group">
             <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">
-              <AnimatedCounter end={70} suffix="%" />
-            </p>
+            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">70%</p>
             <p className="text-gray-300">Faster Conflict Resolution</p>
           </div>
         </div>

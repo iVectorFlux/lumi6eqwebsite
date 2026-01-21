@@ -6,9 +6,9 @@ import Navbar from '@/components/Navbar';
 
 const Blogs: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-
+  
   const categories = ['All', 'Leadership', 'Team Building', 'Learning', 'Technology', 'Analytics', 'Remote Work'];
-
+  
   // Static blog posts data
   const blogPosts = [
     {
@@ -78,15 +78,16 @@ const Blogs: React.FC = () => {
       featured: false
     }
   ];
-
-  const filteredPosts = selectedCategory === 'All'
-    ? blogPosts
+  
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory);
-
+  
   const featuredPosts = blogPosts.filter(post => post.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+      <Navbar />
       {/* Hero Section */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="container mx-auto px-4">
@@ -105,10 +106,11 @@ const Blogs: React.FC = () => {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${category === selectedCategory
-                    ? 'bg-rebuttl-blue text-white'
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  category === selectedCategory
+                    ? 'bg-rebuttl-blue text-white' 
                     : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-200'
-                  }`}
+                }`}
               >
                 {category}
               </button>
@@ -154,7 +156,7 @@ const Blogs: React.FC = () => {
                         {post.readTime}
                       </div>
                     </div>
-                    <Link
+                    <Link 
                       to={`/blogs/${post.id}`}
                       className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
                     >
@@ -200,7 +202,7 @@ const Blogs: React.FC = () => {
                       {post.readTime}
                     </div>
                   </div>
-                  <Link
+                  <Link 
                     to={`/blogs/${post.id}`}
                     className="inline-flex items-center gap-2 text-rebuttl-blue font-semibold hover:gap-3 transition-all"
                   >
