@@ -2,8 +2,6 @@
 import React, { Suspense, lazy } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import LazyImage from '@/components/LazyImage';
-import EQTestBanner from '@/components/EQTestBanner';
 
 // Lazy load non-critical components
 const HowItWorks = lazy(() => import('@/components/HowItWorks'));
@@ -20,10 +18,6 @@ const SectionLoader = () => (
 const Index: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-rebuttl-lightBg">
-      {/* EQ Test Banner at the very top */}
-      <EQTestBanner variant="sticky" />
-      {/* Spacer for sticky banner */}
-      <div className="h-10" />
       <Navbar />
       <main>
         <Hero />

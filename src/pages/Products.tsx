@@ -136,12 +136,6 @@ const Products: React.FC = () => {
               >
                 Get started free
               </a>
-              <Link
-                to="/eq-test"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-stone-300 bg-white text-stone-700 px-6 py-3 text-sm font-medium hover:bg-stone-50 transition-colors"
-              >
-                Take free EQ test
-              </Link>
             </div>
           </div>
         </section>
