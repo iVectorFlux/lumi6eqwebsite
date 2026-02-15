@@ -15,6 +15,7 @@ const Blogs = lazy(() => import("./pages/Blogs"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const Education = lazy(() => import("./pages/Education"));
 const Individuals = lazy(() => import("./pages/Individuals"));
+const Manifesto = lazy(() => import("./pages/Manifesto"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Component to handle scrolling to hash fragments
@@ -72,6 +73,7 @@ const App = () => {
               <Route path="/blogs/:slug" element={<BlogPost />} />
               <Route path="/education" element={<Education />} />
               <Route path="/individuals" element={<Individuals />} />
+              <Route path="/manifesto" element={<Manifesto />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

@@ -61,6 +61,14 @@ const Footer: React.FC = () => {
               <li><a href="#" className="text-gray-600 hover:text-rebuttl-blue transition-colors">Contact</a></li>
               <li><a href="#" className="text-gray-600 hover:text-rebuttl-blue transition-colors">Press Kit</a></li>
             </ul>
+            <a
+              href="https://tally.so/r/wM0JlY"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
+            >
+              Talk to Sales
+            </a>
           </div>
         </div>
         

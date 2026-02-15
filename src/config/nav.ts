@@ -59,6 +59,7 @@ const DISCOVER_ICON = 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/discover
 const GROW_ICON = 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/learn-.svg';
 
 export const navItems: NavItem[] = [
+  { type: 'link', label: 'Our Philosophy', href: '/manifesto' },
   {
     type: 'dropdown',
     label: 'Products',
