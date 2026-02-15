@@ -1,4 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+const INSIGHTS_IMAGES = {
+  hiring: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/hiring+managers.svg',
+  ld: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/for+trainers.svg',
+  individuals: 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/for+individuals.svg',
+} as const;
 
 const personas = [
   {
@@ -20,6 +26,15 @@ const personas = [
 
 const SectionInsights: React.FC = () => {
   const [active, setActive] = useState('hiring');
+
+  // Preload all persona images on mount so they're cached when user switches tabs
+  useEffect(() => {
+    Object.values(INSIGHTS_IMAGES).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
   return (
     <section id="insights" className="py-16 md:py-24 bg-rebuttl-lightBg">
       <div className="container mx-auto px-4">
@@ -78,12 +93,12 @@ const SectionInsights: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
-                  src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/hiring+managers.svg" 
+                  src={INSIGHTS_IMAGES.hiring} 
                   alt="Hiring and Talent teams - EQ-powered assessments"
                   className="w-full h-full object-contain"
-                  loading="lazy"
+                  loading="eager"
                 />
               </div>
             </div>
@@ -118,12 +133,11 @@ const SectionInsights: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
-                  src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/for+trainers.svg" 
+                  src={INSIGHTS_IMAGES.ld} 
                   alt="Learning & Development Teams - EQ micro-training"
                   className="w-full h-full object-contain"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -155,12 +169,11 @@ const SectionInsights: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center">
+              <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
-                  src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/for+individuals.svg" 
+                  src={INSIGHTS_IMAGES.individuals} 
                   alt="For Individuals - Unlock your emotional superpower"
                   className="w-full h-full object-contain"
-                  loading="lazy"
                 />
               </div>
             </div>

@@ -1,21 +1,8 @@
 
-import React, { memo, useCallback } from 'react';
+import React, { memo } from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowDown } from 'lucide-react';
 
 const Hero: React.FC = memo(() => {
-  const handleScrollToFeatures = useCallback(() => {
-    document.getElementById('features')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }, []);
-  
-  const handleScrollToExplainer = useCallback(() => {
-    document.getElementById('explainer')?.scrollIntoView({
-      behavior: 'smooth'
-    });
-  }, []);
-  
   return (
     <section className="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -23,10 +10,10 @@ const Hero: React.FC = memo(() => {
           {/* Left side - Heading and content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="relative">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight md:leading-tight bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-orange bg-clip-text text-transparent max-w-4xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.35] max-w-4xl">
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-rebuttl-purple to-rebuttl-blue animate-color-pulse bg-clip-text text-transparent">Future of work runs on </span>
-                  <span className="bg-gradient-to-r from-rebuttl-orange to-rebuttl-red animate-color-pulse bg-clip-text text-transparent">Emotional Intelligence</span>
+                  <span className="bg-gradient-to-r from-rebuttl-purple to-rebuttl-blue animate-color-pulse bg-clip-text text-transparent">The Future of Work Runs on </span>
+                  <span className="bg-gradient-to-r from-rebuttl-orange to-rebuttl-red animate-color-pulse bg-clip-text text-transparent whitespace-nowrap">Emotional Intelligence</span>
                   <svg className="absolute -bottom-6 left-0 w-full" viewBox="0 0 200 8" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 4C50 1 150 1 200 4" stroke="url(#paint0_linear)" strokeWidth="2" fill="none" strokeLinecap="round" />
                     <defs>
@@ -42,7 +29,7 @@ const Hero: React.FC = memo(() => {
             </div>
             
             <p className="mt-8 text-xl md:text-2xl text-gray-600 max-w-3xl">
-              Lumi6 helps teams turn emotional intelligence into a superpower because the best workplaces run on empathy, not just algorithms
+              Lumi6 transforms emotional intelligence into measurable insight — helping teams hire better, lead smarter, and grow faster.
             </p>
             
             <div className="mt-10 flex flex-col md:flex-row gap-4">
@@ -61,10 +48,6 @@ const Hero: React.FC = memo(() => {
                 See It in Action →
               </Button>
             </div>
-            
-            <button onClick={handleScrollToFeatures} className="mt-20 animate-float group" aria-label="Scroll to features">
-              <ArrowDown className="w-10 h-10 text-rebuttl-blue group-hover:text-rebuttl-purple transition-colors duration-300" />
-            </button>
           </div>
 
           {/* Right side - Image */}

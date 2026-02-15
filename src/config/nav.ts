@@ -55,9 +55,6 @@ export function isLink(item: NavItem): item is NavLinkItem {
 
 // ——— Config: edit below to add/remove nav items ———
 
-const DISCOVER_ICON = 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/discovery-and-assess.svg';
-const GROW_ICON = 'https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/learn-.svg';
-
 export const navItems: NavItem[] = [
   { type: 'link', label: 'Our Philosophy', href: '/manifesto' },
   {
@@ -65,8 +62,8 @@ export const navItems: NavItem[] = [
     label: 'Products',
     view: 'card',
     items: [
-      { label: 'Discover', href: '/products/discover', description: 'Assess & insights', icon: DISCOVER_ICON },
-      { label: 'Grow', href: '/products/grow', description: 'Learning & nudges', icon: GROW_ICON },
+      { label: 'Discover', href: '/products/discover', description: 'Assess & insights' },
+      { label: 'Grow', href: '/products/grow', description: 'Learning & nudges' },
     ],
     footerHref: '/products',
     footerLabel: 'View all products',

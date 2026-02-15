@@ -59,29 +59,41 @@ const HowItWorks: React.FC = () => {
         </div>
         
         {/* Why EQ Matters two-column section */}
-        <section id="why-eq" className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div>
-            <h3 className="text-2xl md:text-3xl font-semibold mb-4">Why Emotional Intelligence is the #1 Future Skill</h3>
-            <ul className="space-y-4 text-gray-700">
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> 90% of top performers excel in EQ — it's the hidden driver behind leadership and team success.</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> EQ fuels collaboration, adaptability & resilience — the skills every workplace needs to thrive in uncertainty.</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> AI can automate tasks — but it can't replace empathy, trust, or human connection.</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> High-EQ teams innovate faster — psychological safety unlocks bold ideas and better decisions.</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> EQ powers retention & engagement — employees stay where they feel valued, understood, and inspired.</li>
-              <li className="flex items-start gap-3"><span className="text-rebuttl-blue mt-1">✔</span> Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.</li>
+        <section id="why-eq" className="mt-16 md:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+          <div className="order-2 lg:order-1">
+            <h3 className="text-2xl md:text-3xl font-bold text-stone-900 mb-2">
+              Why Emotional Intelligence is the #1 Future Skill
+            </h3>
+            <p className="text-stone-600 mb-8 text-lg">
+              The workplace skill that separates top performers and builds teams that last.
+            </p>
+            <ul className="space-y-5">
+              {[
+                '90% of top performers excel in EQ — it\'s the hidden driver behind leadership and team success.',
+                'EQ fuels collaboration, adaptability & resilience — the skills every workplace needs to thrive in uncertainty.',
+                'AI can automate tasks — but it can\'t replace empathy, trust, or human connection.',
+                'High-EQ teams innovate faster — psychological safety unlocks bold ideas and better decisions.',
+                'EQ powers retention & engagement — employees stay where they feel valued, understood, and inspired.',
+                'Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.',
+              ].map((text, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-rebuttl-blue/10 flex items-center justify-center mt-0.5" aria-hidden>
+                    <svg className="w-3.5 h-3.5 text-rebuttl-blue" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                  </span>
+                  <span className="text-stone-700 leading-relaxed">{text}</span>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="relative">
-            {/* EQ Domains Infographic */}
-            <div className="mx-auto w-full">
-              <img 
-                src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/EI+domains.png" 
-                alt="Emotional Intelligence Domains - Self-Awareness, Self-Management, Social Awareness, and Relationship Management"
-                className="w-full h-auto rounded-xl object-cover"
+          <div className="order-1 lg:order-2">
+            <figure className="rounded-2xl overflow-hidden bg-stone-50 border border-stone-100">
+              <img
+                src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/philosophy/L%26D2.svg"
+                alt="Learning and development — collaboration and growth"
+                className="w-full h-auto object-contain"
                 loading="lazy"
               />
-            </div>
-            
+            </figure>
           </div>
         </section>
       </div>

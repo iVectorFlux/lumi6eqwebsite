@@ -17,7 +17,7 @@ const Manifesto: React.FC = () => {
             <p className="text-sm font-medium text-rebuttl-blue uppercase tracking-widest mb-3">
               Our Philosophy
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight max-w-4xl mx-auto leading-[1.15]">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-stone-900 tracking-tight max-w-4xl mx-auto leading-[1.35]">
               The Lumi6 Manifesto
             </h1>
             <p className="mt-4 text-lg text-stone-600 max-w-2xl mx-auto">

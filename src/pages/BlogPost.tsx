@@ -461,7 +461,7 @@ const BlogPost: React.FC = () => {
               <span className="inline-block bg-rebuttl-blue text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
                 {blog.category}
               </span>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-4xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.35] max-w-4xl">
                 {blog.title}
               </h1>
             </div>
