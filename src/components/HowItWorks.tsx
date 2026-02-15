@@ -30,7 +30,7 @@ const HowItWorks: React.FC = () => {
     <section id="how-it-works" className="py-16 md:py-24 bg-white relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 bg-gradient-to-r from-rebuttl-purple to-rebuttl-blue bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 bg-gradient-to-r from-rebuttl-purple to-rebuttl-blue bg-clip-text text-transparent pb-1 leading-[1.4]">
             How Lumi6 Works
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">

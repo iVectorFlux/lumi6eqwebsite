@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Logo from '@/components/ui/logo';
-import { Button } from '@/components/ui/button';
 import { NavItemsDesktop, NavItemsMobile } from '@/components/nav';
 import { signInUrl, signUpUrl } from '@/config/nav';
 
@@ -50,13 +49,22 @@ const Navbar: React.FC = () => {
 
           <NavItemsDesktop openDropdownIndex={openDropdownIndex} setOpenDropdownIndex={setOpenDropdownIndex} />
 
-          <div className="hidden md:flex gap-4">
-            <Button variant="ghost" className="text-gray-700 hover:text-rebuttl-blue" onClick={() => window.open(signInUrl, '_blank')}>
+          <div className="hidden md:flex items-center gap-3">
+            <button
+              type="button"
+              className="text-gray-700 hover:text-rebuttl-blue font-medium transition-colors"
+              onClick={() => window.open(signInUrl, '_blank')}
+            >
               Sign In
-            </Button>
-            <Button className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white" onClick={() => window.open(signUpUrl, '_blank')}>
+            </button>
+            <a
+              href={signUpUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-glass-primary px-5 py-2.5 text-sm"
+            >
               Sign Up
-            </Button>
+            </a>
           </div>
 
           <button
@@ -72,12 +80,22 @@ const Navbar: React.FC = () => {
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-md py-4 px-4 z-50">
             <NavItemsMobile onItemClick={closeMobile} openSections={mobileOpenSections} toggleSection={toggleMobileSection} />
             <div className="flex flex-col gap-2 pt-4 border-t border-gray-200 mt-2">
-              <Button variant="ghost" className="text-gray-700 hover:text-rebuttl-blue" onClick={() => { closeMobile(); window.open(signInUrl, '_blank'); }}>
+              <button
+                type="button"
+                className="text-left text-gray-700 hover:text-rebuttl-blue font-medium py-2"
+                onClick={() => { closeMobile(); window.open(signInUrl, '_blank'); }}
+              >
                 Sign In
-              </Button>
-              <Button className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white" onClick={() => { closeMobile(); window.open(signUpUrl, '_blank'); }}>
+              </button>
+              <a
+                href={signUpUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-glass-primary inline-flex justify-center px-5 py-2.5 text-sm"
+                onClick={closeMobile}
+              >
                 Sign Up
-              </Button>
+              </a>
             </div>
           </div>
         )}

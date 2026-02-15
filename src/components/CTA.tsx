@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 const CTA: React.FC = () => {
   return (
@@ -14,50 +13,47 @@ const CTA: React.FC = () => {
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-rebuttl-purple/20 rounded-full blur-3xl"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-          Ready to <span className="bg-gradient-to-r from-rebuttl-blue to-rebuttl-orange bg-clip-text text-transparent">Build the EQ Advantage?</span>
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">
+          Ready to
         </h2>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+        <p className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-sm">
+          Build the EQ Advantage?
+        </p>
+        <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
           Start measuring, building, and reinforcing emotional intelligence — exactly where work happens.
         </p>
         
-        <div className="flex flex-col md:flex-row justify-center gap-4">
-          <Button 
-            className="bg-white text-rebuttl-navy hover:bg-gray-100 h-12 px-8 text-lg group relative overflow-hidden"
-            onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
+        <div className="flex justify-center">
+          <a
+            href="https://tally.so/r/wM0JlY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-glass h-12 px-8 text-lg text-rebuttl-navy font-semibold min-w-[160px]"
           >
-            <span className="relative z-10">Talk to sales</span>
-            <span className="absolute inset-0 w-0 bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple opacity-10 group-hover:w-full transition-all duration-300"></span>
-          </Button>
-          <Button 
-            variant="outline" 
-            className="border-white text-rebuttl-blue hover:bg-white hover:text-rebuttl-navy h-12 px-8 text-lg transition-colors"
-            onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
-          >
-            <span>Learn More</span>
-          </Button>
+            Talk to sales
+          </a>
         </div>
         
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center relative group">
-            <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">50K+</p>
-            <p className="text-gray-300">Leaders Enabled</p>
+            <div className="absolute inset-0 bg-white/10 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">50K+</p>
+            <p className="text-gray-300 text-sm md:text-base">Leaders Enabled</p>
           </div>
           <div className="text-center relative group">
-            <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">10K+</p>
-            <p className="text-gray-300">Lessons Completed</p>
+            <div className="absolute inset-0 bg-white/10 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">10K+</p>
+            <p className="text-gray-300 text-sm md:text-base">Lessons Completed</p>
           </div>
           <div className="text-center relative group">
-            <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">85%</p>
-            <p className="text-gray-300">Teams Report Growth</p>
+            <div className="absolute inset-0 bg-white/10 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">85%</p>
+            <p className="text-gray-300 text-sm md:text-base">Teams Report Growth</p>
           </div>
           <div className="text-center relative group">
-            <div className="absolute inset-0 bg-white/5 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <p className="text-4xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent mb-2">70%</p>
-            <p className="text-gray-300">Faster Conflict Resolution</p>
+            <div className="absolute inset-0 bg-white/10 rounded-xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white mb-2">70%</p>
+            <p className="text-gray-300 text-sm md:text-base">Faster Conflict Resolution</p>
           </div>
         </div>
       </div>

@@ -1,11 +1,12 @@
 
 import React, { memo } from 'react';
-import { Button } from '@/components/ui/button';
 
 const Hero: React.FC = memo(() => {
   return (
-    <section className="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="relative pt-36 pb-16 md:pt-44 md:pb-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
+      {/* Distinct hero background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,rgba(99,102,241,0.08),transparent)] pointer-events-none" />
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-12">
           {/* Left side - Heading and content */}
           <div className="flex-1 text-center lg:text-left">
@@ -32,21 +33,15 @@ const Hero: React.FC = memo(() => {
               Lumi6 transforms emotional intelligence into measurable insight — helping teams hire better, lead smarter, and grow faster.
             </p>
             
-            <div className="mt-10 flex flex-col md:flex-row gap-4">
-              <Button 
-                className="bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white h-12 px-8 text-lg relative overflow-hidden group"
-                onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+            <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center lg:justify-start">
+              <a
+                href="https://app.lumi6.com/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-glass-primary h-12 px-8 text-lg min-w-[180px]"
               >
-                <span className="relative z-10">Try Lumi6 Free</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-rebuttl-blue via-rebuttl-purple to-rebuttl-blue bg-size-200 bg-pos-0 group-hover:bg-pos-100 transition-all duration-500"></span>
-              </Button>
-              <Button 
-                variant="outline"
-                className="h-12 px-8 text-lg border-rebuttl-blue text-rebuttl-blue hover:bg-rebuttl-blue/10"
-                onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
-              >
-                See It in Action →
-              </Button>
+                Try Lumi6 Free
+              </a>
             </div>
           </div>
 

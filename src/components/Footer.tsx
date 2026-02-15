@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
               href="https://tally.so/r/wM0JlY"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block mt-4 bg-rebuttl-blue hover:bg-rebuttl-blue/90 text-white font-semibold px-5 py-2.5 rounded-lg transition-colors"
+              className="btn-glass-primary inline-flex mt-4 px-5 py-2.5 text-sm"
             >
               Talk to Sales
             </a>

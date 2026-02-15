@@ -5,7 +5,7 @@ const SectionContinuous: React.FC = () => {
     <section id="continuous" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent pb-1 leading-[1.4]">
             From assessments to action
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ const SectionContinuous: React.FC = () => {
                 href="https://app.lumi6.com/signup" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block bg-rebuttl-blue text-white px-6 py-3 rounded-md hover:bg-rebuttl-blue/90 transition-colors"
+                className="btn-glass-primary inline-flex px-6 py-3 text-base"
               >
                 See Sample Dashboard
               </a>

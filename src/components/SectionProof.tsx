@@ -43,7 +43,7 @@ const SectionProof: React.FC = () => {
     <section ref={sectionRef} id="proof" className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent pb-1 leading-[1.4]">
             What Leaders Are Saying
           </h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">Built on a 12-competency EQ model.</p>
@@ -96,13 +96,22 @@ const SectionProof: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {quotes.map((q, i) => (
-            <div key={i} className="p-6 rounded-2xl border border-gray-100 bg-white shadow-sm">
-              <div className="text-gray-800">“{q.text}”</div>
-              <div className="mt-4 text-sm text-gray-600">{q.name} — {q.title}</div>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <div className="p-8 md:p-10 rounded-2xl border border-gray-100 bg-white shadow-sm text-center">
+            <blockquote className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed">“{quotes[0].text}”</blockquote>
+            <footer className="mt-6 text-gray-600">
+              <cite className="font-semibold not-italic text-stone-900">{quotes[0].name}</cite>
+              <span className="text-gray-500"> — {quotes[0].title}</span>
+            </footer>
+          </div>
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {quotes.slice(1).map((q, i) => (
+              <div key={i} className="p-5 rounded-xl border border-gray-100 bg-gray-50/50">
+                <p className="text-gray-700">“{q.text}”</p>
+                <p className="mt-3 text-sm text-gray-600">{q.name} — {q.title}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

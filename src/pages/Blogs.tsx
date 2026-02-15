@@ -141,11 +141,13 @@ const Blogs: React.FC = () => {
                     />
                   </Link>
                   <CardContent className="md:w-1/2 p-8 flex flex-col justify-center">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="bg-rebuttl-blue text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="flex flex-wrap items-center gap-3 mb-4">
+                      <span className="rounded-lg bg-stone-100 text-stone-700 px-3 py-1.5 text-sm font-medium border border-stone-200/80">
                         Featured
                       </span>
-                      <span className="text-sm text-gray-500">{post.category}</span>
+                      <span className="rounded-lg bg-stone-100 text-stone-600 px-3 py-1.5 text-sm border border-stone-200/80">
+                        {post.category}
+                      </span>
                     </div>
                     <Link to={`/blogs/${post.id}`}>
                       <h2 className="text-2xl md:text-3xl font-bold mb-4 group-hover:text-rebuttl-blue transition-colors cursor-pointer">
@@ -191,7 +193,7 @@ const Blogs: React.FC = () => {
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="rounded-lg bg-white/90 backdrop-blur-sm text-gray-700 px-3 py-1.5 text-sm font-medium border border-white/80">
                       {post.category}
                     </span>
                   </div>

@@ -39,7 +39,7 @@ const SectionInsights: React.FC = () => {
     <section id="insights" className="py-16 md:py-24 bg-rebuttl-lightBg">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-rebuttl-blue to-rebuttl-purple bg-clip-text text-transparent pb-1 leading-[1.4]">
             For Hiring, Development & Everyday Work
           </h2>
         </div>
