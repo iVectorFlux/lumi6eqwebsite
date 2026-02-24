@@ -528,7 +528,7 @@ const BlogPost: React.FC = () => {
               Discover how Lumi6 can help your organization build emotional intelligence at scale.
             </p>
             <button 
-              onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+              onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
               className="bg-white hover:bg-gray-100 text-rebuttl-blue px-8 py-4 rounded-lg font-bold transition-colors text-lg"
             >
               Get Started Free

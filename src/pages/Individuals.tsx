@@ -238,7 +238,7 @@ const Individuals: React.FC = () => {
                   Individual EQ assessments and personal development tools are launching soon. Be the first to know when they're available.
                 </p>
                 <button
-                  onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+                  onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
                   className="bg-rebuttl-purple hover:bg-rebuttl-purple/90 text-white px-8 py-3 rounded-lg font-bold transition-colors"
                 >
                   Get Notified

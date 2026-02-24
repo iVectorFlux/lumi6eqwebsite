@@ -129,7 +129,7 @@ const Products: React.FC = () => {
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://app.lumi6.com/signup"
+                href="https://tally.so/r/wM0JlY"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-rebuttl-blue text-white px-6 py-3 text-sm font-medium hover:bg-rebuttl-blue/90 transition-colors"

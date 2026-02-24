@@ -114,7 +114,7 @@ const ProductsDiscover: React.FC = () => {
               <p className="text-lg mb-6 opacity-90">Start with a free assessment and see the difference emotional intelligence can make.</p>
               <button
                 className="bg-white text-rebuttl-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                onClick={() => window.open('https://app.lumi6.com/signup', '_blank')}
+                onClick={() => window.open('https://tally.so/r/wM0JlY', '_blank')}
               >
                 Get started free
               </button>

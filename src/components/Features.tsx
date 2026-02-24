@@ -179,7 +179,7 @@ const Features: React.FC = () => {
         <div className="text-center mt-14">
           <p className="text-xl font-semibold text-stone-800 mb-4">Get your EQ snapshot in minutes</p>
           <a 
-            href="https://app.lumi6.com/signup" 
+            href="https://tally.so/r/wM0JlY" 
             target="_blank" 
             rel="noopener noreferrer"
             className="btn-glass-primary inline-flex px-8 py-3.5 text-lg"

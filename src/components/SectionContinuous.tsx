@@ -42,7 +42,7 @@ const SectionContinuous: React.FC = () => {
             </div>
             <div className="pt-2">
               <a 
-                href="https://app.lumi6.com/signup" 
+                href="https://tally.so/r/wM0JlY" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-glass-primary inline-flex px-6 py-3 text-base"

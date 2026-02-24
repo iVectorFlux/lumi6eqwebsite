@@ -107,5 +107,5 @@ export const navItems: NavItem[] = [
 //   footerLabel: 'View all solutions',
 // };
 
-export const signInUrl = 'https://app.lumi6.com/login';
-export const signUpUrl = 'https://app.lumi6.com/signup';
+export const signInUrl = 'https://tally.so/r/wM0JlY';
+export const signUpUrl = 'https://tally.so/r/wM0JlY';

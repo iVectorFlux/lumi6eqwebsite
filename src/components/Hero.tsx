@@ -35,7 +35,7 @@ const Hero: React.FC = memo(() => {
             
             <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center lg:justify-start">
               <a
-                href="https://app.lumi6.com/signup"
+                href="https://tally.so/r/wM0JlY"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-glass-primary h-12 px-8 text-lg min-w-[180px]"
