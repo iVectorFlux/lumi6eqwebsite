@@ -30,7 +30,7 @@ const Hero: React.FC = memo(() => {
             </div>
             
             <p className="mt-8 text-xl md:text-2xl text-gray-600 max-w-3xl">
-              Lumi6 transforms emotional intelligence into measurable insight — helping teams hire better, lead smarter, and grow faster.
+              Lumi6 transforms emotional intelligence into measurable insight, helping teams hire better, lead smarter, and grow faster.
             </p>
             
             <div className="mt-10 flex flex-col md:flex-row gap-4 justify-center lg:justify-start">

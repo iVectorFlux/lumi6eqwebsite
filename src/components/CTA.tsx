@@ -20,7 +20,7 @@ const CTA: React.FC = () => {
           Build the EQ Advantage?
         </p>
         <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-10">
-          Start measuring, building, and reinforcing emotional intelligence — exactly where work happens.
+          Start measuring, building, and reinforcing emotional intelligence, exactly where work happens.
         </p>
         
         <div className="flex justify-center">

@@ -69,12 +69,12 @@ const HowItWorks: React.FC = () => {
             </p>
             <ul className="space-y-5">
               {[
-                '90% of top performers excel in EQ — it\'s the hidden driver behind leadership and team success.',
-                'EQ fuels collaboration, adaptability & resilience — the skills every workplace needs to thrive in uncertainty.',
-                'AI can automate tasks — but it can\'t replace empathy, trust, or human connection.',
-                'High-EQ teams innovate faster — psychological safety unlocks bold ideas and better decisions.',
-                'EQ powers retention & engagement — employees stay where they feel valued, understood, and inspired.',
-                'Future-ready leaders lead with EQ — influence, empathy, and resilience now matter more than strategy alone.',
+                '90% of top performers excel in EQ. It is the hidden driver behind leadership and team success.',
+                'EQ fuels collaboration, adaptability and resilience, the skills every workplace needs to thrive in uncertainty.',
+                'AI can automate tasks, but it cannot replace empathy, trust, or human connection.',
+                'High-EQ teams innovate faster. Psychological safety unlocks bold ideas and better decisions.',
+                'EQ powers retention and engagement. Employees stay where they feel valued, understood, and inspired.',
+                'Future-ready leaders lead with EQ: influence, empathy, and resilience now matter more than strategy alone.',
               ].map((text, i) => (
                 <li key={i} className="flex items-start gap-4">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-rebuttl-blue/10 flex items-center justify-center mt-0.5" aria-hidden>
@@ -89,7 +89,7 @@ const HowItWorks: React.FC = () => {
             <figure className="rounded-2xl overflow-hidden bg-stone-50 border border-stone-100">
               <img
                 src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/philosophy/L%26D2.svg"
-                alt="Learning and development — collaboration and growth"
+                alt="Learning and development: collaboration and growth"
                 className="w-full h-auto object-contain"
                 loading="lazy"
               />

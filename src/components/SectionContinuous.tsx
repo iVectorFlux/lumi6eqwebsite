@@ -19,7 +19,7 @@ const SectionContinuous: React.FC = () => {
             <div className="mx-auto w-full">
               <img 
                 src="https://lumi6-dev.s3.eu-north-1.amazonaws.com/EQ/Assess+to+action.png" 
-                alt="From Assessments to Action - EQ Development Process"
+                alt="From assessments to action: EQ development process"
                 className="w-full h-auto rounded-xl shadow-md object-cover"
                 loading="lazy"
               />
@@ -30,7 +30,7 @@ const SectionContinuous: React.FC = () => {
           <div className="space-y-4">
             <div className="p-5 rounded-2xl border border-gray-100 bg-white shadow-sm">
               <div className="text-sm text-gray-500 mb-1">Upcoming 1:1</div>
-              <div className="text-gray-800">Before your 1:1, remember: your teammate thrives on structure — frame your feedback with clear next steps.</div>
+              <div className="text-gray-800">Before your 1:1, remember: your teammate thrives on structure, so frame your feedback with clear next steps.</div>
             </div>
             <div className="p-5 rounded-2xl border border-gray-100 bg-white shadow-sm">
               <div className="text-sm text-gray-500 mb-1">Team Standup</div>

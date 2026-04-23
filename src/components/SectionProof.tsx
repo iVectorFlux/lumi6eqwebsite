@@ -101,14 +101,14 @@ const SectionProof: React.FC = () => {
             <blockquote className="text-xl md:text-2xl text-gray-800 font-medium leading-relaxed">“{quotes[0].text}”</blockquote>
             <footer className="mt-6 text-gray-600">
               <cite className="font-semibold not-italic text-stone-900">{quotes[0].name}</cite>
-              <span className="text-gray-500"> — {quotes[0].title}</span>
+              <span className="text-gray-500">, {quotes[0].title}</span>
             </footer>
           </div>
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
             {quotes.slice(1).map((q, i) => (
               <div key={i} className="p-5 rounded-xl border border-gray-100 bg-gray-50/50">
                 <p className="text-gray-700">“{q.text}”</p>
-                <p className="mt-3 text-sm text-gray-600">{q.name} — {q.title}</p>
+                <p className="mt-3 text-sm text-gray-600">{q.name}, {q.title}</p>
               </div>
             ))}
           </div>

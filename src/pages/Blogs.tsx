@@ -46,7 +46,7 @@ const Blogs: React.FC = () => {
     },
     {
       id: 'micro-learning-eq',
-      title: 'Micro-Learning: The Secret to Sustainable EQ Development',
+      title: 'Micro learning: the secret to sustainable EQ development',
       excerpt: 'Discover why bite-sized learning is more effective than traditional training for emotional intelligence.',
       author: 'Dr. Emily Rodriguez',
       date: '2024-01-10',
@@ -57,7 +57,7 @@ const Blogs: React.FC = () => {
     },
     {
       id: 'real-time-eq-nudges',
-      title: 'Real-Time EQ Nudges: Changing Behavior Where It Matters',
+      title: 'Real time EQ nudges: changing behavior where it matters',
       excerpt: 'How contextual guidance can help teams apply emotional intelligence in their daily interactions.',
       author: 'Alex Thompson',
       date: '2024-01-08',

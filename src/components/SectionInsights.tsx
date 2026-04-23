@@ -74,11 +74,11 @@ const SectionInsights: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-3">Use cases:</h4>
                     <ul className="space-y-2 text-sm leading-relaxed text-gray-700">
-                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">👥</span>Talent Acquisition – Benchmark beyond technical skills with role-aware EQ data.</li>
-                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🎯</span>Hiring Managers – Compare candidates on collaboration, empathy, and adaptability.</li>
-                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🤝</span>Mergers & Acquisitions (M&A) – Culture compatibility checks for smoother integrations.</li>
-                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">✨</span>Culture Fit Evaluations – Ensure new hires align with organizational values.</li>
-                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🚀</span>Project Readiness – Assess adaptability and resilience for high-stakes roles.</li>
+                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">👥</span>Talent Acquisition: benchmark beyond technical skills with role-aware EQ data.</li>
+                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🎯</span>Hiring Managers: compare candidates on collaboration, empathy, and adaptability.</li>
+                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🤝</span>Mergers & Acquisitions (M&A): culture compatibility checks for smoother integrations.</li>
+                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">✨</span>Culture Fit Evaluations: ensure new hires align with organizational values.</li>
+                      <li className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">🚀</span>Project Readiness: assess adaptability and resilience for high-stakes roles.</li>
                     </ul>
                   </div>
                   <div>
@@ -96,7 +96,7 @@ const SectionInsights: React.FC = () => {
               <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
                   src={INSIGHTS_IMAGES.hiring} 
-                  alt="Hiring and Talent teams - EQ-powered assessments"
+                  alt="Hiring and Talent teams: EQ-powered assessments"
                   className="w-full h-full object-contain"
                   loading="eager"
                 />
@@ -106,17 +106,17 @@ const SectionInsights: React.FC = () => {
           {active === 'ld' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
               <div>
-                <h3 className="text-xl font-semibold mb-2">Equip employees with practical micro-trainings in empathy, resilience, and influence — the human edge AI can't replicate.</h3>
+                <h3 className="text-xl font-semibold mb-2">Equip employees with practical micro trainings in empathy, resilience, and influence: the human edge AI cannot replicate.</h3>
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-3">Use cases:</h4>
                     <ul className="space-y-2 text-sm leading-relaxed text-gray-700">
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">📚</span>Learning & Development (L&D) – Auto-curated micro-learning mapped to competency gaps.</li>
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🌱</span>Talent Development – Personalized growth journeys for employees at every level.</li>
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">👑</span>Leadership Development – Influence, coaching, and conflict management skills.</li>
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🌈</span>Diversity, Equity & Inclusion (DE&I) – Build empathy and inclusive team dynamics.</li>
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🔄</span>Succession Planning – Prepare future leaders with core EQ competencies.</li>
-                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">⚡</span>Organizational Effectiveness – Drive culture, collaboration, and resilience at scale.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">📚</span>Learning & Development (L&D): auto-curated micro learning mapped to competency gaps.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🌱</span>Talent Development: personalized growth journeys for employees at every level.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">👑</span>Leadership Development: influence, coaching, and conflict management skills.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🌈</span>Diversity, Equity & Inclusion (DE&I): build empathy and inclusive team dynamics.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">🔄</span>Succession Planning: prepare future leaders with core EQ competencies.</li>
+                      <li className="flex items-start gap-2"><span className="text-orange-500 mt-0.5">⚡</span>Organizational Effectiveness: drive culture, collaboration, and resilience at scale.</li>
                     </ul>
                   </div>
                   <div>
@@ -136,7 +136,7 @@ const SectionInsights: React.FC = () => {
               <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
                   src={INSIGHTS_IMAGES.ld} 
-                  alt="Learning & Development Teams - EQ micro-training"
+                  alt="Learning and Development teams: EQ micro training"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -150,11 +150,11 @@ const SectionInsights: React.FC = () => {
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-3">Use cases:</h4>
                     <ul className="space-y-2 text-sm leading-relaxed text-gray-700">
-                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🔍</span>Self-Discovery – Understand your EQ profile across 12 competencies.</li>
-                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">📈</span>Career Growth – Strengthen influence, adaptability, and resilience.</li>
-                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">💪</span>Personal Development – Build habits for better communication and stress management.</li>
-                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🎓</span>Job Seekers & Graduates – Stand out with EQ insights beyond test scores.</li>
-                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🌟</span>Aspiring Leaders – Prepare for leadership roles with stronger people skills.</li>
+                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🔍</span>Self-Discovery: understand your EQ profile across 12 competencies.</li>
+                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">📈</span>Career Growth: strengthen influence, adaptability, and resilience.</li>
+                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">💪</span>Personal Development: build habits for better communication and stress management.</li>
+                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🎓</span>Job Seekers & Graduates: stand out with EQ insights beyond test scores.</li>
+                      <li className="flex items-start gap-2"><span className="text-cyan-500 mt-0.5">🌟</span>Aspiring Leaders: prepare for leadership roles with stronger people skills.</li>
                     </ul>
                   </div>
                   <div>
@@ -172,7 +172,7 @@ const SectionInsights: React.FC = () => {
               <div className="aspect-video bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 rounded-xl p-4 flex items-center justify-center min-h-[200px]">
                 <img 
                   src={INSIGHTS_IMAGES.individuals} 
-                  alt="For Individuals - Unlock your emotional superpower"
+                  alt="For individuals: unlock your emotional superpower"
                   className="w-full h-full object-contain"
                 />
               </div>

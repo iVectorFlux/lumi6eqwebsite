@@ -5,8 +5,8 @@
  * to a dedicated page (e.g. Solutions → "For HR" → /solutions/hr is its own page).
  *
  * - link: single top-level link (one page)
- * - dropdown (card): 2–6 items, each item = one page; use when you have few options
- * - dropdown (mega): many items (10–20+), each item = one page; use groups to organize
+ * - dropdown (card): 2 to 6 items, each item = one page; use when you have few options
+ * - dropdown (mega): many items (10 or more), each item = one page; use groups to organize
  *   (e.g. Solutions with "By role" and "By use case" columns, each entry links to its page)
  */
 
@@ -33,7 +33,7 @@ export type NavDropdownGroup = {
 export type NavDropdownItem = {
   type: 'dropdown';
   label: string;
-  /** 'card' = compact panel (2–6 items, each = page). 'mega' = many items (each = page), use groups */
+  /** 'card' = compact panel (2 to 6 items, each = page). 'mega' = many items (each = page), use groups */
   view: 'card' | 'mega';
   /** For card view: flat list; each entry is a page */
   items?: NavDropdownEntry[];
@@ -53,7 +53,7 @@ export function isLink(item: NavItem): item is NavLinkItem {
   return item.type === 'link';
 }
 
-// ——— Config: edit below to add/remove nav items ———
+// Config: edit below to add/remove nav items
 
 export const navItems: NavItem[] = [
   { type: 'link', label: 'Our Philosophy', href: '/manifesto' },
@@ -75,7 +75,7 @@ export const navItems: NavItem[] = [
 ];
 
 /**
- * Example: "Solutions" with many items — each item is its own page.
+ * Example: "Solutions" with many items; each item is its own page.
  * Add a route per href (e.g. /solutions/hr, /solutions/ld) and a page component for each.
  * Uncomment and add to navItems when ready.
  */

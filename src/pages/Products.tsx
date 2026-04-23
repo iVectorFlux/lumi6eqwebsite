@@ -73,7 +73,7 @@ const Products: React.FC = () => {
               <ProductCard
                 to="/products/discover"
                 image={IMAGES.discover}
-                imageAlt="Lumi6 Discover - EQ assessment"
+                imageAlt="Lumi6 Discover: EQ assessment"
                 title="Discover"
                 subtitle="Assess EQ in context with role-specific scenarios"
                 accent="purple"
@@ -81,7 +81,7 @@ const Products: React.FC = () => {
               <ProductCard
                 to="/products/discover"
                 image={IMAGES.insights}
-                imageAlt="Lumi6 Insights - Reports & analytics"
+                imageAlt="Lumi6 Insights: reports and analytics"
                 title="Insights"
                 subtitle="Dashboards and reports that turn data into direction"
                 accent="blue"
@@ -101,7 +101,7 @@ const Products: React.FC = () => {
               <ProductCard
                 to="/products/grow"
                 image={IMAGES.grow}
-                imageAlt="Lumi6 Grow - Learning platform"
+                imageAlt="Lumi6 Grow: learning platform"
                 title="Grow"
                 subtitle="Personalized learning paths for all 12 EQ competencies"
                 accent="orange"
@@ -109,7 +109,7 @@ const Products: React.FC = () => {
               <ProductCard
                 to="/products/grow"
                 image={IMAGES.flow}
-                imageAlt="Lumi6 Flow - Nudges in the flow of work"
+                imageAlt="Lumi6 Flow: nudges in the flow of work"
                 title="Flow"
                 subtitle="Real-time nudges and guidance when they matter most"
                 accent="green"

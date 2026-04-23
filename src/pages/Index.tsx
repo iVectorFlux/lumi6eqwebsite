@@ -24,7 +24,7 @@ const Index: React.FC = () => {
           href="/manifesto"
           className="block w-full bg-stone-800 text-stone-100 text-center py-2.5 text-sm font-medium hover:bg-stone-700 transition-colors"
         >
-          Our Philosophy — The Lumi6 Manifesto
+          Our Philosophy: The Lumi6 Manifesto
         </a>
         <Hero />
         <Suspense fallback={<SectionLoader />}>

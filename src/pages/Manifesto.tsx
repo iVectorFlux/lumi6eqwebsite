@@ -32,7 +32,7 @@ const Manifesto: React.FC = () => {
               <figure className="mb-8 rounded-xl overflow-hidden bg-stone-50">
                 <img
                   src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/philosophy/TA.svg"
-                  alt="Decisions about people—who to hire, trust, promote"
+                  alt="Decisions about people: who to hire, trust, promote"
                   className="w-full h-auto object-cover"
                 />
                 <figcaption className="sr-only">Hiring and people decisions</figcaption>
@@ -44,7 +44,7 @@ const Manifesto: React.FC = () => {
                 Organizations run on decisions about people: who to hire, who to trust, who to promote, who to develop. Yet the signals behind these decisions are often noisy, subjective, and inconsistent.
               </p>
               <p className="text-stone-600 leading-[1.75] mb-6">
-                Resumes summarise the past but rarely predict behaviour. Interviews tend to reward confidence over competence. Performance reviews capture perception more than reality. The result is not only inefficiency but misalignment—talent underutilised, potential overlooked, risk recognised too late.
+                Resumes summarise the past but rarely predict behaviour. Interviews tend to reward confidence over competence. Performance reviews capture perception more than reality. The result is not only inefficiency but misalignment: talent underutilised, potential overlooked, risk recognised too late.
               </p>
               <p className="text-stone-700 font-medium leading-[1.75]">
                 We believe this is not a people problem. It is a measurement problem.
@@ -56,7 +56,7 @@ const Manifesto: React.FC = () => {
                 Intelligence about human behaviour is now possible
               </h2>
               <p className="text-stone-600 leading-[1.75] mb-6">
-                Advances in behavioural science, psychometrics, and machine intelligence make it possible to observe patterns that were previously invisible—not to replace human judgement but to sharpen it; not to label people but to understand them; not to automate decisions but to illuminate them.
+                Advances in behavioural science, psychometrics, and machine intelligence make it possible to observe patterns that were previously invisible: not to replace human judgement but to sharpen it; not to label people but to understand them; not to automate decisions but to illuminate them.
               </p>
             </section>
 
@@ -64,7 +64,7 @@ const Manifesto: React.FC = () => {
               <figure className="mb-8 rounded-xl overflow-hidden bg-stone-50">
                 <img
                   src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/philosophy/L%26D1.svg"
-                  alt="Collaboration and training—assessment and development"
+                  alt="Collaboration and training: assessment and development"
                   className="w-full h-auto object-cover"
                 />
                 <figcaption className="sr-only">Collaboration and learning &amp; development</figcaption>
@@ -94,7 +94,7 @@ const Manifesto: React.FC = () => {
                 Our commitment
               </h2>
               <p className="text-stone-600 leading-[1.75] mb-6">
-                We build with rigour, measure with responsibility, and design for fairness. We prioritise understanding over automation—because behind every datapoint is a person, and every insight carries responsibility.
+                We build with rigour, measure with responsibility, and design for fairness. We prioritise understanding over automation, because behind every datapoint is a person, and every insight carries responsibility.
               </p>
             </section>
 
@@ -102,7 +102,7 @@ const Manifesto: React.FC = () => {
               <figure className="mb-8 rounded-xl overflow-hidden bg-stone-50">
                 <img
                   src="https://yadvhvt9zjohl7ms.public.blob.vercel-storage.com/philosophy/IC.svg"
-                  alt="Winning—a new standard for how organisations see people"
+                  alt="Winning: a new standard for how organisations see people"
                   className="w-full h-auto object-cover"
                 />
                 <figcaption className="sr-only">Winning through better signals</figcaption>

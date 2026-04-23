@@ -24,7 +24,7 @@ const ProductsDiscover: React.FC = () => {
                 Lumi6 Discover
               </h1>
               <p className="text-stone-600 mb-6 leading-relaxed">
-                Comprehensive EQ assessments that reveal team strengths and growth areas with precision. Lumi6 Discover places people into realistic, job-specific scenarios that mirror the pressures and decisions of everyday work — so you see how they act in context, not just what they say.
+                Comprehensive EQ assessments that reveal team strengths and growth areas with precision. Lumi6 Discover places people into realistic, job-specific scenarios that mirror the pressures and decisions of everyday work, so you see how they act in context, not just what they say.
               </p>
               <ul className="space-y-2 mb-6">
                 <li className="flex items-center gap-2 text-sm text-stone-600">
@@ -45,7 +45,7 @@ const ProductsDiscover: React.FC = () => {
                 </li>
               </ul>
               <div className="bg-purple-50 p-4 rounded-xl">
-                <p className="text-purple-900 text-sm"><strong>Why it matters:</strong> You don't just learn what someone says about themselves — you see how they respond at work.</p>
+                <p className="text-purple-900 text-sm"><strong>Why it matters:</strong> You don't just learn what someone says about themselves. You see how they respond at work.</p>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -53,7 +53,7 @@ const ProductsDiscover: React.FC = () => {
                 <div className="w-full relative flex items-center justify-center min-h-[280px] md:min-h-[320px]">
                   <img
                     src="/images/optimized/lumi6-discover.webp"
-                    alt="Lumi6 Discover - Assessment platform"
+                    alt="Lumi6 Discover: assessment platform"
                     className="w-full h-auto max-w-full object-contain"
                     loading="eager"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}

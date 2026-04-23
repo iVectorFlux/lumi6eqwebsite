@@ -45,7 +45,7 @@ const ProductsGrow: React.FC = () => {
                 </li>
               </ul>
               <div className="bg-orange-50 p-4 rounded-xl">
-                <p className="text-orange-900 text-sm"><strong>Why it matters:</strong> EQ doesn't change in a workshop — it grows with practice, reflection, and reinforcement.</p>
+                <p className="text-orange-900 text-sm"><strong>Why it matters:</strong> EQ doesn't change in a workshop. It grows with practice, reflection, and reinforcement.</p>
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -53,7 +53,7 @@ const ProductsGrow: React.FC = () => {
                 <div className="w-full relative flex items-center justify-center min-h-[280px] md:min-h-[320px]">
                   <img
                     src="/images/optimized/lumi6-grow.webp"
-                    alt="Lumi6 Grow - Learning platform"
+                    alt="Lumi6 Grow: learning platform"
                     className="w-full h-auto max-w-full object-contain"
                     loading="eager"
                     onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
@@ -76,7 +76,7 @@ const ProductsGrow: React.FC = () => {
                 Lumi6 Flow
               </h2>
               <p className="text-stone-600 mb-4 leading-relaxed">
-                EQ that shows up when it's needed most. Lumi6 Flow integrates into the daily rhythm of work with real-time nudges, reminders, and insights — before meetings, ahead of 1:1s, and in moments of conflict.
+                EQ that shows up when it's needed most. Lumi6 Flow integrates into the daily rhythm of work with real-time nudges, reminders, and insights before meetings, ahead of 1:1s, and in moments of conflict.
               </p>
               <p className="text-stone-600 mb-6 leading-relaxed">
                 By embedding emotional intelligence into meetings and everyday interactions, Flow makes EQ practical and actionable so the right skill appears at the right moment.
