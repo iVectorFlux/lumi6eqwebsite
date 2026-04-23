@@ -69,6 +69,7 @@ export const navItems: NavItem[] = [
     footerLabel: 'View all products',
   },
   { type: 'link', label: 'Education', href: '/education' },
+  { type: 'link', label: 'Skill Lab', href: '/skill-lab' },
   { type: 'link', label: 'Individuals', href: '/individuals' },
   { type: 'link', label: 'Blogs', href: '/blogs' },
 ];
